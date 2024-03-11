@@ -18,11 +18,11 @@ services:
       - db-mysql:db
     depends_on:
       - db-mysql
-  Chambre:
+  Achat:
     container_name: Achat
     build: ./
     ports:
-      - "3085:8085"
+      - "3089:8089"
     environment:
       #port 8082
       - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/achat?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
